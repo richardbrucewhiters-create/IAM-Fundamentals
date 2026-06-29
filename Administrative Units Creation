@@ -1,7 +1,7 @@
-# Create 3-4 Administrative Units
-$departments = @("Finance", "Sales", "IT", "Operations")
+# Create 5 Administrative Units
+$departments = @("Finance", "Sales", "IT", "Operations", "Clinical")
 
-#Loop through list and create a display and description for each $dept entry
+#Loop through the list and create a DisplayName and Description for each $dept entry
 foreach ($dept in $departments) {
     $params = @{
         DisplayName = "$dept AU"
