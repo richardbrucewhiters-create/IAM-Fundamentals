@@ -1,0 +1,12 @@
+# Create 3-4 Administrative Units
+$departments = @("Finance", "Sales", "IT", "Operations")
+
+#Loop through list and create a display and description for each $dept entry
+foreach ($dept in $departments) {
+    $params = @{
+        DisplayName = "$dept AU"
+        Description = "Administrative unit for $dept department"
+    }
+#create the AU with the above parameters
+    New-MgDirectoryAdministrativeUnit -BodyParameter $params
+}
